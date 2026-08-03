@@ -10,8 +10,32 @@
 
     <meta
         name="description"
-        content="Luxury Travel Design & Personalized Experiences"
+        content="Luxury travel design and personalized experiences for resorts, cruises, Europe tours, and bespoke journeys with Atlas Set."
     >
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+    <meta name="author" content="Atlas Set">
+    <meta name="theme-color" content="#111111">
+
+    <link rel="canonical" href="https://hlaznarez-web.github.io/travel/">
+    <link rel="alternate" hreflang="en" href="https://hlaznarez-web.github.io/travel/">
+    <link rel="alternate" hreflang="es" href="https://hlaznarez-web.github.io/travel/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hlaznarez-web.github.io/travel/">
+    <meta property="og:title" content="Atlas Set | Luxury Travel Design">
+    <meta property="og:description" content="Luxury travel design and personalized experiences for resorts, cruises, Europe tours, and bespoke journeys.">
+    <meta property="og:image" content="https://hlaznarez-web.github.io/travel/og-image.svg">
+    <meta property="og:image:alt" content="Atlas Set luxury travel agency branding">
+    <meta property="og:site_name" content="Atlas Set">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Atlas Set | Luxury Travel Design">
+    <meta name="twitter:description" content="Luxury travel design and personalized experiences for resorts, cruises, Europe tours, and bespoke journeys.">
+    <meta name="twitter:image" content="https://hlaznarez-web.github.io/travel/og-image.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +45,17 @@
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=6">
 
 </head>
 
 <body>
 
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- HEADER -->
 
-    <header class="header">
+    <header class="header" role="banner">
 
         <div class="container">
 
@@ -37,28 +63,34 @@
                 ATLAS SET
             </a>
 
-            <nav>
+            <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="mobile-nav" aria-label="Primary navigation">
 
                 <ul class="nav-links">
 
                     <li>
-                        <a href="#home">Home</a>
+                        <a href="#home" data-lang="nav.home">Home</a>
                     </li>
 
                     <li>
-                        <a href="#how-we-work">How We Work</a>
+                        <a href="#how-we-work" data-lang="nav.how">How We Work</a>
                     </li>
 
                     <li>
-                        <a href="#experiences">Experiences</a>
+                        <a href="#experiences" data-lang="nav.experiences">Experiences</a>
                     </li>
 
                     <li>
-                        <a href="#why-atlas-set">Why Atlas Set</a>
+                        <a href="#why-atlas-set" data-lang="nav.why">Why Atlas Set</a>
                     </li>
 
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact" data-lang="nav.contact">Contact</a>
                     </li>
 
                 </ul>
@@ -67,11 +99,11 @@
 
             <div class="right-menu">
 
-                <button class="language" type="button">
+                <button class="language" type="button" id="language-toggle" aria-label="Switch language">
                     EN
                 </button>
 
-                <a href="#contact" class="btn-nav">
+                <a href="#contact" class="btn-nav" data-lang="nav.start">
                     Start Your Journey
                 </a>
 
@@ -82,7 +114,7 @@
     </header>
 
 
-    <main>
+    <main id="main-content" tabindex="-1" aria-label="Main content">
 
         <!-- HERO -->
 
@@ -92,28 +124,28 @@
 
             <div class="hero-content">
 
-                <span class="subtitle">
-                    TRAVEL DESIGN &amp; PERSONALIZED EXPERIENCES
+                <span class="subtitle" data-lang="hero.subtitle">
+                    TAILORED LUXURY TRAVEL PLANNING
                 </span>
 
-                <h1>
-                    Discover the world,<br>
-                    designed around you.
+                <h1 data-lang="hero.title" data-lang-type="html">
+                    Discover a journey shaped around<br>
+                    your style, rhythm, and priorities.
                 </h1>
 
-                <p>
-                    Every journey is carefully planned according to your destination,
-                    budget, travel style and expectations.
+                <p data-lang="hero.text">
+                    We plan each itinerary with care, combining refined recommendations,
+                    practical detail, and personal guidance from the first conversation.
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#contact" class="btn btn-primary">
-                        Design My Trip
+                    <a href="#contact" class="btn btn-primary" data-lang="hero.design">
+                        Book a Consultation
                     </a>
 
-                    <a href="#experiences" class="btn btn-secondary">
-                        Explore Experiences
+                    <a href="#experiences" class="btn btn-secondary" data-lang="hero.explore">
+                        Explore Our Approach
                     </a>
 
                 </div>
@@ -129,18 +161,17 @@
 
             <div class="atlas-method-header">
 
-                <span class="section-eyebrow">
+                <span class="section-eyebrow" data-lang="method.eyebrow">
                     THE ATLAS METHOD
                 </span>
 
-                <h2>
-                    We do not sell vacations.<br>
-                    We design journeys around people.
+                <h2 data-lang="method.title" data-lang-type="html">
+                    A thoughtful process built for travelers who value clarity and confidence.
                 </h2>
 
-                <p>
-                    Every trip begins with understanding who you are, what you need
-                    and what must be considered before you travel.
+                <p data-lang="method.text">
+                    Every itinerary begins with careful listening so every detail feels
+                    considered, seamless, and right for you.
                 </p>
 
             </div>
@@ -153,13 +184,13 @@
                         01
                     </span>
 
-                    <h3>
-                        Discover You
+                    <h3 data-lang="method.card1.title">
+                        Understand Your Priorities
                     </h3>
 
-                    <p>
-                        We learn your travel style, budget, expectations,
-                        documentation needs and priorities.
+                    <p data-lang="method.card1.text">
+                        We learn how you travel, what matters most, and what should be
+                        considered before your journey begins.
                     </p>
 
                 </article>
@@ -170,13 +201,13 @@
                         02
                     </span>
 
-                    <h3>
-                        Design
+                    <h3 data-lang="method.card2.title">
+                        Design with Care
                     </h3>
 
-                    <p>
-                        We compare resorts, cruises, European tours,
-                        hotels and carefully selected travel options.
+                    <p data-lang="method.card2.text">
+                        We compare refined resorts, cruises, European itineraries, and
+                        carefully selected options to find the strongest fit.
                     </p>
 
                 </article>
@@ -187,12 +218,12 @@
                         03
                     </span>
 
-                    <h3>
-                        Optimize
+                    <h3 data-lang="method.card3.title">
+                        Refine the Details
                     </h3>
 
-                    <p>
-                        We organize the smartest itinerary, reduce unnecessary costs
+                    <p data-lang="method.card3.text">
+                        We shape a thoughtful itinerary, reduce unnecessary costs,
                         and help prevent avoidable travel mistakes.
                     </p>
 
@@ -204,13 +235,13 @@
                         04
                     </span>
 
-                    <h3>
-                        Travel With Confidence
+                    <h3 data-lang="method.card4.title">
+                        Stay Supported
                     </h3>
 
-                    <p>
-                        From planning to departure, we remain available
-                        to guide you through every important step.
+                    <p data-lang="method.card4.text">
+                        From planning to departure, we remain available to guide you
+                        through each important step with clarity and care.
                     </p>
 
                 </article>
@@ -226,19 +257,18 @@
 
             <div class="section-title">
 
-                <span class="section-eyebrow">
+                <span class="section-eyebrow" data-lang="experiences.eyebrow">
                     CURATED EXPERIENCES
                 </span>
 
-                <h2>
-                    Every destination begins<br>
+                <h2 data-lang="experiences.title" data-lang-type="html">
+                    The right destination begins<br>
                     with the right experience.
                 </h2>
 
-                <p>
-                    Whether you dream of a beachfront resort, a Mediterranean cruise,
-                    a European itinerary or a fully customized journey,
-                    we design every detail around you.
+                <p data-lang="experiences.text">
+                    Whether you are dreaming of a private resort stay, a Mediterranean cruise,
+                    an European itinerary, or a fully customized journey, we design every detail around you.
                 </p>
 
             </div>
@@ -251,12 +281,12 @@
 
                     <div class="experience-content">
 
-                        <span>
-                            Luxury Resorts
+                        <span data-lang="experiences.card1.label">
+                            Private Resorts
                         </span>
 
-                        <h3>
-                            Resorts &amp; Escapes
+                        <h3 data-lang="experiences.card1.title">
+                            Resort Retreats
                         </h3>
 
                     </div>
@@ -269,12 +299,12 @@
 
                     <div class="experience-content">
 
-                        <span>
-                            Ocean Experiences
+                        <span data-lang="experiences.card2.label">
+                            Ocean Escapes
                         </span>
 
-                        <h3>
-                            Cruises
+                        <h3 data-lang="experiences.card2.title">
+                            Cruise Journeys
                         </h3>
 
                     </div>
@@ -287,12 +317,12 @@
 
                     <div class="experience-content">
 
-                        <span>
+                        <span data-lang="experiences.card3.label">
                             Curated Itineraries
                         </span>
 
-                        <h3>
-                            European Tours
+                        <h3 data-lang="experiences.card3.title">
+                            Europe Tours
                         </h3>
 
                     </div>
@@ -305,12 +335,12 @@
 
                     <div class="experience-content">
 
-                        <span>
-                            Designed For You
+                        <span data-lang="experiences.card4.label">
+                            Tailored to You
                         </span>
 
-                        <h3>
-                            Personalized Journeys
+                        <h3 data-lang="experiences.card4.title">
+                            Custom Travel
                         </h3>
 
                     </div>
@@ -328,18 +358,18 @@
 
             <div class="why-atlas-header">
 
-                <span class="section-eyebrow">
+                <span class="section-eyebrow" data-lang="why.eyebrow">
                     WHY TRAVELERS CHOOSE ATLAS SET
                 </span>
 
-                <h2>
-                    Luxury is not just where you stay.<br>
-                    It is how every decision is made before you leave home.
+                <h2 data-lang="why.title" data-lang-type="html">
+                    Luxury is felt long before departure.<br>
+                    It begins with thoughtful planning.
                 </h2>
 
-                <p>
-                    We combine personalized planning, careful comparison and human guidance
-                    to help you travel with greater clarity and confidence.
+                <p data-lang="why.text">
+                    We combine careful planning, refined recommendations, and personal guidance
+                    to help you make confident decisions with clarity.
                 </p>
 
             </div>
@@ -352,13 +382,13 @@
                         01
                     </span>
 
-                    <h3>
-                        Personalized Planning
+                    <h3 data-lang="why.card1.title">
+                        Thoughtful Planning
                     </h3>
 
-                    <p>
+                    <p data-lang="why.card1.text">
                         Every itinerary is designed around your budget, travel style,
-                        expectations and priorities.
+                        expectations, and priorities from the start.
                     </p>
 
                 </article>
@@ -369,12 +399,12 @@
                         02
                     </span>
 
-                    <h3>
-                        Smart Recommendations
+                    <h3 data-lang="why.card2.title">
+                        Practical Recommendations
                     </h3>
 
-                    <p>
-                        We compare multiple travel options to identify the experience
+                    <p data-lang="why.card2.text">
+                        We compare thoughtful travel options to identify the experience
                         that offers the strongest overall value.
                     </p>
 
@@ -386,12 +416,12 @@
                         03
                     </span>
 
-                    <h3>
-                        Travel Confidence
+                    <h3 data-lang="why.card3.title">
+                        Confident Decisions
                     </h3>
 
-                    <p>
-                        We help identify important requirements, costs and considerations
+                    <p data-lang="why.card3.text">
+                        We help identify important requirements, costs, and considerations
                         before you make a reservation.
                     </p>
 
@@ -403,13 +433,13 @@
                         04
                     </span>
 
-                    <h3>
-                        Human Guidance
+                    <h3 data-lang="why.card4.title">
+                        Personal Support
                     </h3>
 
-                    <p>
+                    <p data-lang="why.card4.text">
                         From your first consultation until departure, you work with
-                        a real person who understands your journey.
+                        a real person who understands your journey and priorities.
                     </p>
 
                 </article>
@@ -420,82 +450,163 @@
 
 
 
-        <!-- TRENDING DESTINATIONS -->
+        <!-- FEATURED DESTINATIONS -->
 
         <section class="trending-destinations" id="trending">
 
             <div class="trending-header">
 
-                <span class="section-eyebrow">
-                    TRENDING NOW
+                <span class="section-eyebrow" data-lang="trending.eyebrow">
+                    FEATURED DESTINATIONS
                 </span>
 
-                <h2>
-                    Places worth discovering<br>
-                    before everyone else.
+                <h2 data-lang="trending.title" data-lang-type="html">
+                    Dream-worthy escapes, curated<br>
+                    for your next unforgettable stay.
                 </h2>
 
-                <p>
-                    A concise selection of emerging destinations, smaller cities
-                    and distinctive places inspiring travelers right now.
+                <p data-lang="trending.text">
+                    From sunlit coastlines to timeless city escapes, each destination is selected
+                    for comfort, beauty, and effortless planning.
                 </p>
 
             </div>
 
             <div class="trending-grid">
 
-                <article class="trending-card trending-alps">
+                <article class="trending-card trending-punta-cana">
 
                     <div class="trending-overlay"></div>
 
                     <div class="trending-content">
 
-                        <span>France</span>
+                        <span data-lang="trending.card1.country">Punta Cana</span>
 
-                        <h3>Saint-Gervais-les-Bains</h3>
+                        <h3 data-lang="trending.card1.title">Oceanfront Calm</h3>
 
-                        <p>
-                            Alpine scenery, thermal traditions and a quieter way
-                            to experience the French mountains.
+                        <p data-lang="trending.card1.text">
+                            Soft sand, luxury resorts, and a serene rhythm designed for rest,
+                            romance, and easy indulgence.
                         </p>
+
+                        <a href="#contact" class="btn btn-light" data-lang="trending.card1.cta">
+                            Learn More
+                        </a>
 
                     </div>
 
                 </article>
 
-                <article class="trending-card trending-guadalajara">
+                <article class="trending-card trending-cancun">
 
                     <div class="trending-overlay"></div>
 
                     <div class="trending-content">
 
-                        <span>Mexico</span>
+                        <span data-lang="trending.card2.country">Cancun & Riviera Maya</span>
 
-                        <h3>Guadalajara</h3>
+                        <h3 data-lang="trending.card2.title">Beachfront Luxury</h3>
 
-                        <p>
-                            Architecture, gastronomy and cultural depth beyond
-                            Mexico's most familiar destinations.
+                        <p data-lang="trending.card2.text">
+                            Elegant stays, vibrant culture, and beautiful water views that make
+                            every day feel effortless and elevated.
                         </p>
+
+                        <a href="#contact" class="btn btn-light" data-lang="trending.card2.cta">
+                            Learn More
+                        </a>
 
                     </div>
 
                 </article>
 
-                <article class="trending-card trending-barbados">
+                <article class="trending-card trending-orlando">
 
                     <div class="trending-overlay"></div>
 
                     <div class="trending-content">
 
-                        <span>Barbados</span>
+                        <span data-lang="trending.card3.country">Orlando</span>
 
-                        <h3>The East Coast</h3>
+                        <h3 data-lang="trending.card3.title">Family Magic</h3>
 
-                        <p>
-                            Dramatic Atlantic landscapes, local character and
-                            a calmer Caribbean rhythm.
+                        <p data-lang="trending.card3.text">
+                            Thoughtfully planned stays with comfort, convenience, and memorable
+                            moments for every member of the family.
                         </p>
+
+                        <a href="#contact" class="btn btn-light" data-lang="trending.card3.cta">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="trending-card trending-cruises">
+
+                    <div class="trending-overlay"></div>
+
+                    <div class="trending-content">
+
+                        <span data-lang="trending.card4.country">Caribbean Cruises</span>
+
+                        <h3 data-lang="trending.card4.title">Seamless Voyages</h3>
+
+                        <p data-lang="trending.card4.text">
+                            From island hopping to private shore days, our cruise planning keeps
+                            every detail polished from start to finish.
+                        </p>
+
+                        <a href="#contact" class="btn btn-light" data-lang="trending.card4.cta">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="trending-card trending-europe">
+
+                    <div class="trending-overlay"></div>
+
+                    <div class="trending-content">
+
+                        <span data-lang="trending.card5.country">Europe</span>
+
+                        <h3 data-lang="trending.card5.title">Timeless Discovery</h3>
+
+                        <p data-lang="trending.card5.text">
+                            Iconic cities, elegant stays, and curated experiences shaped around
+                            your pace and personal style.
+                        </p>
+
+                        <a href="#contact" class="btn btn-light" data-lang="trending.card5.cta">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <article class="trending-card trending-hawaii">
+
+                    <div class="trending-overlay"></div>
+
+                    <div class="trending-content">
+
+                        <span data-lang="trending.card6.country">Hawaii</span>
+
+                        <h3 data-lang="trending.card6.title">Island Serenity</h3>
+
+                        <p data-lang="trending.card6.text">
+                            Balmy air, signature resorts, and graceful itineraries designed for
+                            a restorative island escape.
+                        </p>
+
+                        <a href="#contact" class="btn btn-light" data-lang="trending.card6.cta">
+                            Learn More
+                        </a>
 
                     </div>
 
@@ -512,18 +623,18 @@
 
             <div class="final-cta-content">
 
-                <span class="section-eyebrow">
+                <span class="section-eyebrow" data-lang="cta.eyebrow">
                     START YOUR JOURNEY
                 </span>
 
-                <h2>
-                    Your next trip should feel exciting,<br>
-                    not overwhelming.
+                <h2 data-lang="cta.title" data-lang-type="html">
+                    Your next journey should feel calm,<br>
+                    clear, and effortless.
                 </h2>
 
-                <p>
-                    Tell us where you want to go, what matters most to you
-                    and the type of experience you are looking for.
+                <p data-lang="cta.text">
+                    Share a few details about where you want to go, how you travel,
+                    and what matters most, and we will help you begin with confidence.
                 </p>
 
                 <div class="final-cta-buttons">
@@ -533,13 +644,15 @@
                         class="btn btn-primary"
                         target="_blank"
                         rel="noopener noreferrer"
+                        data-lang="cta.primary"
                     >
-                        Plan My Trip
+                        Message on WhatsApp
                     </a>
 
                     <a
                         href="mailto:hlaznarez@gmail.com"
                         class="btn btn-light"
+                        data-lang="cta.secondary"
                     >
                         Email Atlas Set
                     </a>
@@ -572,17 +685,17 @@
     <div class="container">
 
         <div class="section-title">
-            <span class="section-eyebrow">START PLANNING</span>
+            <span class="section-eyebrow" data-lang="form.eyebrow">START PLANNING</span>
 
-            <h2>Your Journey Begins Here</h2>
+            <h2 data-lang="form.title">Begin Planning Your Journey</h2>
 
-            <p>
-                Tell us a little about your dream trip and we'll design a
-                personalized travel experience around you.
+            <p data-lang="form.text">
+                Share a few details and we will prepare a thoughtful itinerary
+                tailored to your preferences and travel style.
             </p>
         </div>
 
-        <form action="https://formsubmit.co/hlaznarez@gmail.com" method="POST" class="contact-form">
+        <form action="https://formsubmit.co/hlaznarez@gmail.com" method="POST" class="contact-form" aria-label="Travel inquiry form">
 
 <input type="hidden" name="_subject" value="New Atlas Set Travel Inquiry">
 <input type="hidden" name="_captcha" value="false">
@@ -591,56 +704,59 @@
             <div class="form-grid">
 
                 <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" name="Full Name" required>
+                    <label for="full-name" data-lang="form.fullname">Full Name</label>
+                    <input id="full-name" type="text" name="Full Name" autocomplete="name" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="Email" required>
+                    <label for="email" data-lang="form.email">Email</label>
+                    <input id="email" type="email" name="Email" autocomplete="email" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Phone</label>
-                    <input type="tel" name="Phone">
+                    <label for="phone" data-lang="form.phone">Phone</label>
+                    <input id="phone" type="tel" name="Phone" autocomplete="tel">
                 </div>
 
                 <div class="form-group">
-                    <label>Destination</label>
-                    <input type="text" name="Destination">
+                    <label for="destination" data-lang="form.destination">Destination</label>
+                    <input id="destination" type="text" name="Destination" autocomplete="off">
                 </div>
 
                 <div class="form-group">
-                    <label>Travel Dates</label>
-                    <input type="text" name="Travel Dates">
+                    <label for="travel-dates" data-lang="form.dates">Travel Dates</label>
+                    <input id="travel-dates" type="text" name="Travel Dates" autocomplete="off">
                 </div>
 
                 <div class="form-group">
-                    <label>Number of Travelers</label>
-                    <input type="number" name="Travelers" min="1">
+                    <label for="travelers" data-lang="form.travelers">Number of Travelers</label>
+                    <input id="travelers" type="number" name="Travelers" min="1" autocomplete="off">
                 </div>
 
                 <div class="form-group">
-                    <label>Estimated Budget</label>
-                    <input type="text" name="Budget">
+                    <label for="budget" data-lang="form.budget">Estimated Budget</label>
+                    <input id="budget" type="text" name="Budget" autocomplete="off">
                 </div>
 
             </div>
 
             <div class="form-group">
 
-                <label>What kind of experience are you looking for?</label>
+                <label for="experience" data-lang="form.question">What kind of experience are you looking for?</label>
 
                 <textarea
+                    id="experience"
                     name="Experience"
                     rows="6"
+                    data-lang="form.placeholder"
+                    data-lang-type="placeholder"
                     placeholder="Luxury resort, family vacation, cruise, Europe tour, honeymoon, adventure..."
                 ></textarea>
 
             </div>
 
-            <button type="submit" class="btn btn-primary">
-                Start Planning My Journey
+            <button type="submit" class="btn btn-primary" data-lang="form.submit">
+                Send My Inquiry
             </button>
 
         </form>
@@ -651,17 +767,17 @@
     </main>
 
 
-<footer class="footer">
+<footer class="footer" role="contentinfo">
 
     <div class="container footer-container">
 
         <div class="footer-brand">
             <h3>ATLAS SET</h3>
-            <p>Luxury Travel Design & Personalized Experiences.</p>
+            <p data-lang="footer.brand">Luxury travel planning, tailored with care and attention to detail.</p>
         </div>
 
         <div class="footer-contact">
-            <h4>Contact</h4>
+            <h4 data-lang="footer.contact">Contact</h4>
 
             <p>
                 <a href="tel:+17865035312">786-503-5312</a>
@@ -675,92 +791,59 @@
 
         <div class="footer-links">
 
-            <h4>Navigation</h4>
+            <h4 data-lang="footer.navigation">Navigation</h4>
 
-            <a href="#home">Home</a><br>
-            <a href="#how-we-work">How We Work</a><br>
-            <a href="#experiences">Experiences</a><br>
-            <a href="#why">Why Atlas Set</a><br>
-            <a href="#inquiry">Contact</a>
+            <a href="#home" data-lang="footer.home">Home</a><br>
+            <a href="#how-we-work" data-lang="footer.how">How We Work</a><br>
+            <a href="#experiences" data-lang="footer.experiences">Experiences</a><br>
+            <a href="#why-atlas-set" data-lang="footer.why">Why Atlas Set</a><br>
+            <a href="#inquiry" data-lang="footer.inquiry">Contact</a>
 
         </div>
 
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom" data-lang="footer.bottom">
 
-        © 2026 ATLAS SET · Designed Around You.
+        © 2026 ATLAS SET · Crafted for Thoughtful Travel.
 
     </div>
 
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 
-<script>
-const translations = {
-    en: {
-        home: "Home",
-        how: "How We Work",
-        experiences: "Experiences",
-        why: "Why Atlas Set",
-        contact: "Contact",
-        start: "Start Your Journey",
-
-        subtitle: "TRAVEL DESIGN & PERSONALIZED EXPERIENCES",
-        title: "Discover the world,<br>designed around you.",
-        text: "Every journey is carefully planned according to your destination, budget, travel style and expectations.",
-        design: "Design My Trip",
-        explore: "Explore Experiences"
-    },
-
-    es: {
-        home: "Inicio",
-        how: "Cómo Trabajamos",
-        experiences: "Experiencias",
-        why: "Por Qué Atlas Set",
-        contact: "Contacto",
-        start: "Comienza Tu Viaje",
-
-        subtitle: "DISEÑO DE VIAJES Y EXPERIENCIAS PERSONALIZADAS",
-        title: "Descubre el mundo,<br>diseñado para ti.",
-        text: "Cada viaje se planifica cuidadosamente según tu destino, presupuesto, estilo de viaje y expectativas.",
-        design: "Diseña Mi Viaje",
-        explore: "Explorar Experiencias"
-    }
-};
-
-let currentLang = localStorage.getItem("atlas-language") || "en";
-
-function translate(lang){
-
-document.querySelector('[data-lang="home"]').textContent = translations[lang].home;
-document.querySelector('[data-lang="how"]').textContent = translations[lang].how;
-document.querySelector('[data-lang="experiences"]').textContent = translations[lang].experiences;
-document.querySelector('[data-lang="why"]').textContent = translations[lang].why;
-document.querySelector('[data-lang="contact"]').textContent = translations[lang].contact;
-document.querySelector('[data-lang="start"]').textContent = translations[lang].start;
-
-document.querySelector('[data-lang="subtitle"]').textContent = translations[lang].subtitle;
-document.querySelector('[data-lang="title"]').innerHTML = translations[lang].title;
-document.querySelector('[data-lang="text"]').textContent = translations[lang].text;
-document.querySelector('[data-lang="design"]').textContent = translations[lang].design;
-document.querySelector('[data-lang="explore"]').textContent = translations[lang].explore;
-
-document.getElementById("language-toggle").textContent =
-lang === "en" ? "ES" : "EN";
-
-localStorage.setItem("atlas-language",lang);
-
-currentLang = lang;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Atlas Set",
+  "url": "https://hlaznarez-web.github.io/travel/",
+  "description": "Luxury travel design and personalized experiences for resorts, cruises, European tours, and bespoke journeys.",
+  "telephone": "+1-786-503-5312",
+  "email": "hlaznarez@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://wa.me/17865035312"
+  ],
+  "areaServed": [
+    "United States",
+    "Europe",
+    "Caribbean"
+  ],
+  "knowsAbout": [
+    "Luxury travel",
+    "Destination planning",
+    "Cruise vacations",
+    "European travel itineraries",
+    "Personalized travel experiences"
+  ]
 }
-
-translate(currentLang);
-
-document.getElementById("language-toggle").addEventListener("click",()=>{
-translate(currentLang==="en"?"es":"en");
-});
 </script>
+
 </body>
 
 </html>

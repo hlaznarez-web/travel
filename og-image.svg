@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Atlas Set travel agency preview</title>
+  <desc id="desc">Luxury travel agency branding preview with gold accents and travel imagery.</desc>
+  <rect width="1200" height="630" fill="#0f1115"/>
+  <rect x="64" y="64" width="1072" height="502" rx="28" fill="#181b22" stroke="#d4af37" stroke-width="4"/>
+  <path d="M240 194h180l110 162 110-162h180v242H640V294l-110 162-110-162v142H240z" fill="#d4af37"/>
+  <text x="240" y="470" fill="#f5f2ea" font-family="Georgia, serif" font-size="54">ATLAS SET</text>
+  <text x="240" y="525" fill="#c9c0aa" font-family="Arial, sans-serif" font-size="28">Luxury Travel Design &amp; Personalized Experiences</text>
+</svg>
