@@ -1280,16 +1280,22 @@ a {
 
 .contact-section{
     background:#071321;
-    padding:110px 8%;
+    padding:40px 8% 100px;
 }
+
 
 .contact-section .container{
     max-width:1200px;
     margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
 }
 
+
 .contact-form{
-    margin-top:60px;
+    margin-top:0;
 }
 
 .form-grid{
@@ -1354,11 +1360,9 @@ a {
 }
 
 .contact-form button{
-
     margin-top:35px;
-
-    min-width:280px;
-
+    width:100%;
+    max-width:320px;
 }
 
 @media(max-width:900px){
