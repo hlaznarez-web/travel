@@ -697,7 +697,70 @@
 
 <script src="js/script.js"></script>
 
+<script>
+const translations = {
+    en: {
+        home: "Home",
+        how: "How We Work",
+        experiences: "Experiences",
+        why: "Why Atlas Set",
+        contact: "Contact",
+        start: "Start Your Journey",
 
+        subtitle: "TRAVEL DESIGN & PERSONALIZED EXPERIENCES",
+        title: "Discover the world,<br>designed around you.",
+        text: "Every journey is carefully planned according to your destination, budget, travel style and expectations.",
+        design: "Design My Trip",
+        explore: "Explore Experiences"
+    },
+
+    es: {
+        home: "Inicio",
+        how: "Cómo Trabajamos",
+        experiences: "Experiencias",
+        why: "Por Qué Atlas Set",
+        contact: "Contacto",
+        start: "Comienza Tu Viaje",
+
+        subtitle: "DISEÑO DE VIAJES Y EXPERIENCIAS PERSONALIZADAS",
+        title: "Descubre el mundo,<br>diseñado para ti.",
+        text: "Cada viaje se planifica cuidadosamente según tu destino, presupuesto, estilo de viaje y expectativas.",
+        design: "Diseña Mi Viaje",
+        explore: "Explorar Experiencias"
+    }
+};
+
+let currentLang = localStorage.getItem("atlas-language") || "en";
+
+function translate(lang){
+
+document.querySelector('[data-lang="home"]').textContent = translations[lang].home;
+document.querySelector('[data-lang="how"]').textContent = translations[lang].how;
+document.querySelector('[data-lang="experiences"]').textContent = translations[lang].experiences;
+document.querySelector('[data-lang="why"]').textContent = translations[lang].why;
+document.querySelector('[data-lang="contact"]').textContent = translations[lang].contact;
+document.querySelector('[data-lang="start"]').textContent = translations[lang].start;
+
+document.querySelector('[data-lang="subtitle"]').textContent = translations[lang].subtitle;
+document.querySelector('[data-lang="title"]').innerHTML = translations[lang].title;
+document.querySelector('[data-lang="text"]').textContent = translations[lang].text;
+document.querySelector('[data-lang="design"]').textContent = translations[lang].design;
+document.querySelector('[data-lang="explore"]').textContent = translations[lang].explore;
+
+document.getElementById("language-toggle").textContent =
+lang === "en" ? "ES" : "EN";
+
+localStorage.setItem("atlas-language",lang);
+
+currentLang = lang;
+}
+
+translate(currentLang);
+
+document.getElementById("language-toggle").addEventListener("click",()=>{
+translate(currentLang==="en"?"es":"en");
+});
+</script>
 </body>
 
 </html>
