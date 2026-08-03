@@ -1274,3 +1274,99 @@ a {
         font-size: 34px;
     }
 }
+/* ==========================================================
+   CONTACT FORM
+========================================================== */
+
+.contact-section{
+    background:#071321;
+    padding:110px 8%;
+}
+
+.contact-section .container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.contact-form{
+    margin-top:60px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    color:#d8b44c;
+    font-size:13px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+    padding:18px 20px;
+
+    background:#0f1d2d;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    color:#fff;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    transition:.30s;
+
+    outline:none;
+
+}
+
+.contact-form textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+
+    margin-top:10px;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:#d8b44c;
+
+    box-shadow:0 0 0 3px rgba(216,180,76,.15);
+
+}
+
+.contact-form button{
+
+    margin-top:35px;
+
+    min-width:280px;
+
+}
+
+@media(max-width:900px){
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
