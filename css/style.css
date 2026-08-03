@@ -1,94 +1,343 @@
+/* =========================================================
+   ATLAS SET
+   Luxury Travel Website
+========================================================= */
+
+/* RESET */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#08131f;
-    color:#fff;
+/* VARIABLES */
+
+:root{
+
+    --gold:#D4AF37;
+    --white:#ffffff;
+    --dark:#08131f;
+    --gray:#d7d7d7;
+
 }
 
+/* BODY */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Manrope',sans-serif;
+    background:var(--dark);
+    color:var(--white);
+    overflow-x:hidden;
+    line-height:1.6;
+
+}
+
+/* HEADER */
+
 .header{
+
     position:fixed;
     top:0;
     left:0;
+
     width:100%;
-    padding:20px 8%;
+
+    padding:28px 8%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0,0,0,.35);
+
+    background:rgba(8,19,31,.45);
+
+    backdrop-filter:blur(14px);
+
+    z-index:1000;
+
 }
+
+/* LOGO */
 
 .logo{
-    color:#fff;
+
     text-decoration:none;
-    font-size:28px;
-    font-weight:bold;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:var(--white);
+
+    transition:.35s;
+
 }
 
+.logo:hover{
+
+    color:var(--gold);
+
+}
+
+/* NAVIGATION */
+
 .nav-links{
+
     display:flex;
+
     list-style:none;
-    gap:30px;
+
+    gap:42px;
+
 }
 
 .nav-links a{
-    color:#fff;
+
+    position:relative;
+
+    color:var(--white);
+
     text-decoration:none;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    letter-spacing:.8px;
+
+    transition:.35s;
+
 }
+
+.nav-links a:hover{
+
+    color:var(--gold);
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0%;
+
+    height:2px;
+
+    background:var(--gold);
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* HERO */
 
 .hero{
+
     height:100vh;
+
     display:flex;
-    align-items:center;
+
     justify-content:center;
+
+    align-items:center;
+
     text-align:center;
-    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80");
+
+    padding:0 20px;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80");
+
     background-size:cover;
+
     background-position:center;
+
 }
 
+/* HERO CONTENT */
+
 .hero-content{
+
     max-width:900px;
+
+    animation:fadeUp 1.3s ease;
+
 }
 
 .subtitle{
-    color:#d4af37;
-    letter-spacing:3px;
+
+    color:var(--gold);
+
+    font-size:15px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
 }
 
 .hero h1{
-    font-size:68px;
-    margin:20px 0;
+
+    margin-top:20px;
+
+    margin-bottom:28px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:78px;
+
+    line-height:1.05;
+
 }
 
 .hero p{
-    font-size:20px;
-    color:#ddd;
+
+    font-size:22px;
+
+    color:var(--gray);
+
+    max-width:720px;
+
+    margin:auto;
+
 }
 
+/* BUTTONS */
+
 .hero-buttons{
-    margin-top:40px;
+
+    margin-top:45px;
+
 }
 
 .btn{
+
     display:inline-block;
-    padding:15px 34px;
-    border-radius:40px;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
     text-decoration:none;
+
+    font-weight:700;
+
     margin:10px;
-    font-weight:bold;
+
+    transition:.35s;
+
 }
 
 .btn-primary{
-    background:#d4af37;
-    color:#000;
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 30px rgba(212,175,55,.35);
+
 }
 
 .btn-secondary{
-    border:2px solid #fff;
-    color:#fff;
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:#111;
+
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .nav-links{
+
+        gap:20px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero h1{
+
+        font-size:52px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
 }
