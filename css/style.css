@@ -341,3 +341,162 @@ body{
     }
 
 }
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* ==========================================
+   RIGHT MENU
+========================================== */
+
+.right-menu{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+/* ==========================================
+   LANGUAGE BUTTON
+========================================== */
+
+.language{
+
+    background:transparent;
+    border:1px solid rgba(255,255,255,.35);
+    color:white;
+
+    padding:8px 12px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.language:hover{
+
+    border-color:var(--gold);
+
+    color:var(--gold);
+
+}
+
+/* ==========================================
+   HEADER BUTTON
+========================================== */
+
+.btn-nav{
+
+    padding:14px 28px;
+
+    background:var(--gold);
+
+    color:#111;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-nav:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+
+}
+
+/* ==========================================
+   HERO BUTTONS
+========================================== */
+
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.hero-buttons .btn-primary{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+.hero-buttons .btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+
+}
+
+.hero-buttons .btn-secondary{
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.hero-buttons .btn-secondary:hover{
+
+    background:white;
+
+    color:#111;
+
+}
+
+/* ==========================================
+   SCROLL
+========================================== */
+
+.scroll{
+
+    margin-top:60px;
+
+    font-size:34px;
+
+    color:white;
+
+    animation:float 2s infinite;
+
+}
+
+@keyframes float{
+
+    0%{transform:translateY(0);}
+
+    50%{transform:translateY(12px);}
+
+    100%{transform:translateY(0);}
+
+}
