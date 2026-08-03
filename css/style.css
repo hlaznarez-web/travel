@@ -30,10 +30,8 @@ html {
 
 body {
     overflow-x: hidden;
-
     background: var(--dark);
     color: var(--white);
-
     font-family: "Manrope", sans-serif;
 }
 
@@ -63,14 +61,10 @@ a {
     top: 0;
     left: 0;
     z-index: 1000;
-
     width: 100%;
-
     background: rgba(20, 31, 40, 0.78);
-
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-
     transition:
         background 0.4s ease,
         box-shadow 0.4s ease;
@@ -80,17 +74,14 @@ a {
     width: 90%;
     max-width: 1400px;
     margin: auto;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 22px 0;
 }
 
 .logo {
     color: var(--white);
-
     font-family: "Cormorant Garamond", serif;
     font-size: 38px;
     font-weight: 700;
@@ -102,34 +93,26 @@ a {
     display: flex;
     align-items: center;
     gap: 35px;
-
     list-style: none;
 }
 
 .nav-links a {
     position: relative;
-
     color: var(--white);
-
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
-
     transition: color 0.3s ease;
 }
 
 .nav-links a::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: -8px;
-
     width: 0;
     height: 1px;
-
     background: var(--gold);
-
     transition: width 0.3s ease;
 }
 
@@ -149,18 +132,13 @@ a {
 
 .language {
     padding: 7px 10px;
-
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 20px;
-
     background: transparent;
     color: var(--white);
-
     font-family: "Manrope", sans-serif;
     font-size: 12px;
-
     cursor: pointer;
-
     transition:
         border-color 0.3s ease,
         color 0.3s ease;
@@ -173,14 +151,10 @@ a {
 
 .btn-nav {
     padding: 12px 26px;
-
     border: 1px solid var(--gold);
     border-radius: 30px;
-
     color: var(--white);
-
     text-decoration: none;
-
     transition:
         background 0.3s ease,
         color 0.3s ease,
@@ -189,7 +163,6 @@ a {
 
 .btn-nav:hover {
     transform: translateY(-2px);
-
     background: var(--gold);
     color: #000000;
 }
@@ -201,24 +174,19 @@ a {
 
 .hero {
     position: relative;
-
     min-height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background:
         url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80")
         center center / cover no-repeat;
-
     text-align: center;
 }
 
 .overlay {
     position: absolute;
     inset: 0;
-
     background:
         linear-gradient(
             180deg,
@@ -231,18 +199,14 @@ a {
 .hero-content {
     position: relative;
     z-index: 2;
-
     width: 90%;
     max-width: 900px;
-
     transform: translateY(-25px);
 }
 
 .subtitle {
     display: inline-block;
-
     color: var(--gold);
-
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 4px;
@@ -251,7 +215,6 @@ a {
 
 .hero h1 {
     margin: 25px 0;
-
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(54px, 6vw, 82px);
     font-weight: 600;
@@ -261,9 +224,7 @@ a {
 .hero p {
     max-width: 760px;
     margin: 0 auto 40px;
-
     color: #eeeeee;
-
     font-size: 20px;
     line-height: 1.6;
 }
@@ -278,14 +239,10 @@ a {
 
 .btn {
     display: inline-block;
-
     padding: 17px 36px;
-
     border-radius: 40px;
-
     font-weight: 600;
     text-decoration: none;
-
     transition:
         transform 0.3s ease,
         background 0.3s ease,
@@ -300,20 +257,17 @@ a {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-
     box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
 }
 
 .btn-secondary {
     border: 2px solid var(--white);
-
     background: transparent;
     color: var(--white);
 }
 
 .btn-secondary:hover {
     transform: translateY(-3px);
-
     background: var(--white);
     color: #000000;
 }
@@ -325,26 +279,21 @@ a {
 
 .atlas-method {
     padding: 130px 5%;
-
     background: var(--cream);
     color: var(--text-dark);
-
     scroll-margin-top: 95px;
 }
 
 .atlas-method-header {
     max-width: 900px;
     margin: 0 auto 75px;
-
     text-align: center;
 }
 
 .section-eyebrow {
     display: inline-block;
     margin-bottom: 24px;
-
     color: var(--gold-dark);
-
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 4px;
@@ -353,7 +302,6 @@ a {
 
 .atlas-method-header h2 {
     margin-bottom: 28px;
-
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(46px, 5vw, 68px);
     font-weight: 600;
@@ -363,9 +311,7 @@ a {
 .atlas-method-header p {
     max-width: 700px;
     margin: auto;
-
     color: #5f696f;
-
     font-size: 18px;
     line-height: 1.8;
 }
@@ -373,7 +319,6 @@ a {
 .method-grid {
     max-width: 1400px;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
@@ -382,14 +327,10 @@ a {
 .method-card {
     min-height: 330px;
     padding: 42px 34px;
-
     border: 1px solid rgba(23, 35, 44, 0.08);
     border-radius: 22px;
-
     background: var(--white);
-
     box-shadow: 0 18px 45px rgba(20, 31, 40, 0.06);
-
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease,
@@ -398,18 +339,14 @@ a {
 
 .method-card:hover {
     transform: translateY(-8px);
-
     border-color: rgba(177, 138, 34, 0.35);
-
     box-shadow: 0 28px 60px rgba(20, 31, 40, 0.12);
 }
 
 .method-number {
     display: inline-block;
     margin-bottom: 55px;
-
     color: var(--gold-dark);
-
     font-family: "Cormorant Garamond", serif;
     font-size: 28px;
     font-weight: 600;
@@ -417,7 +354,6 @@ a {
 
 .method-card h3 {
     margin-bottom: 18px;
-
     font-family: "Cormorant Garamond", serif;
     font-size: 34px;
     font-weight: 600;
@@ -426,7 +362,6 @@ a {
 
 .method-card p {
     color: var(--text-gray);
-
     font-size: 16px;
     line-height: 1.75;
 }
@@ -438,23 +373,19 @@ a {
 
 .experiences {
     padding: 140px 5%;
-
     background: var(--dark);
     color: var(--white);
-
     scroll-margin-top: 95px;
 }
 
 .section-title {
     max-width: 900px;
     margin: 0 auto 70px;
-
     text-align: center;
 }
 
 .section-title h2 {
     margin: 25px 0;
-
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(46px, 5vw, 68px);
     font-weight: 600;
@@ -464,9 +395,7 @@ a {
 .section-title p {
     max-width: 700px;
     margin: auto;
-
     color: #c8ced3;
-
     font-size: 18px;
     line-height: 1.8;
 }
@@ -474,7 +403,6 @@ a {
 .experience-grid {
     max-width: 1450px;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
@@ -482,18 +410,12 @@ a {
 
 .experience-card {
     position: relative;
-
     height: 420px;
-
     overflow: hidden;
-
     border-radius: 28px;
-
     background-position: center;
     background-size: cover;
-
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
-
     transition:
         transform 0.45s ease,
         box-shadow 0.45s ease;
@@ -501,20 +423,16 @@ a {
 
 .experience-card:hover {
     transform: translateY(-8px);
-
     box-shadow: 0 28px 60px rgba(0, 0, 0, 0.3);
 }
 
 .experience-card::before {
     content: "";
-
     position: absolute;
     inset: 0;
-
     background: inherit;
     background-position: center;
     background-size: cover;
-
     transition: transform 0.7s ease;
 }
 
@@ -526,7 +444,6 @@ a {
     position: absolute;
     inset: 0;
     z-index: 1;
-
     background:
         linear-gradient(
             to top,
@@ -544,7 +461,6 @@ a {
 
 .experience-content span {
     color: var(--gold);
-
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 3px;
@@ -553,9 +469,7 @@ a {
 
 .experience-content h3 {
     margin-top: 16px;
-
     color: var(--white);
-
     font-family: "Cormorant Garamond", serif;
     font-size: 46px;
     font-weight: 600;
@@ -584,6 +498,193 @@ a {
 
 
 /* =========================================
+   WHY TRAVELERS CHOOSE ATLAS SET
+========================================= */
+
+.why-atlas {
+    padding: 140px 5%;
+    background: #ffffff;
+    color: var(--text-dark);
+    scroll-margin-top: 95px;
+}
+
+.why-atlas-header {
+    max-width: 980px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.why-atlas-header h2 {
+    margin: 0 auto 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(46px, 5vw, 68px);
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.why-atlas-header p {
+    max-width: 720px;
+    margin: auto;
+    color: #687178;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.why-grid {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.why-card {
+    position: relative;
+    min-height: 310px;
+    padding: 42px 32px;
+    border: 1px solid #e7e3dc;
+    border-radius: 20px;
+    background: #ffffff;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.why-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 32px;
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background: var(--gold);
+    transition: width 0.35s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(177, 138, 34, 0.35);
+    box-shadow: 0 24px 55px rgba(20, 31, 40, 0.1);
+}
+
+.why-card:hover::before {
+    width: 70px;
+}
+
+.why-number {
+    display: inline-block;
+    margin-bottom: 48px;
+    color: var(--gold-dark);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.why-card h3 {
+    margin-bottom: 18px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.why-card p {
+    color: #687178;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   FINAL CALL TO ACTION
+========================================= */
+
+.final-cta {
+    position: relative;
+    padding: 150px 5%;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            rgba(8, 19, 31, 0.84),
+            rgba(8, 19, 31, 0.9)
+        ),
+        url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1800&q=80")
+        center / cover no-repeat;
+    color: var(--white);
+    scroll-margin-top: 95px;
+}
+
+.final-cta-content {
+    max-width: 950px;
+    margin: auto;
+    text-align: center;
+}
+
+.final-cta h2 {
+    margin: 0 auto 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(48px, 5vw, 72px);
+    font-weight: 600;
+    line-height: 1.05;
+}
+
+.final-cta p {
+    max-width: 700px;
+    margin: 0 auto 42px;
+    color: #d4d9dd;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.final-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.btn-light {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background: transparent;
+    color: var(--white);
+}
+
+.btn-light:hover {
+    transform: translateY(-3px);
+    background: var(--white);
+    color: var(--dark);
+}
+
+.final-cta-contact {
+    margin-top: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    color: #cbd1d5;
+    font-size: 14px;
+}
+
+.final-cta-contact a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.final-cta-contact a:hover {
+    color: var(--gold);
+}
+
+.final-cta-contact span {
+    width: 34px;
+    height: 1px;
+    background: rgba(212, 175, 55, 0.65);
+}
+
+
+/* =========================================
    TABLET
 ========================================= */
 
@@ -605,7 +706,8 @@ a {
         transform: translateY(-10px);
     }
 
-    .method-grid {
+    .method-grid,
+    .why-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -641,10 +743,7 @@ a {
         font-size: 30px;
     }
 
-    .nav-links {
-        display: none;
-    }
-
+    .nav-links,
     .right-menu {
         display: none;
     }
@@ -656,7 +755,6 @@ a {
 
     .hero-content {
         width: 90%;
-
         transform: none;
     }
 
@@ -668,14 +766,12 @@ a {
 
     .hero h1 {
         margin: 20px 0;
-
         font-size: 50px;
         line-height: 1;
     }
 
     .hero p {
         margin-bottom: 30px;
-
         font-size: 17px;
         line-height: 1.6;
     }
@@ -688,7 +784,6 @@ a {
     .btn {
         width: 100%;
         max-width: 300px;
-
         padding: 15px 26px;
     }
 
@@ -708,11 +803,13 @@ a {
         font-size: 16px;
     }
 
-    .method-grid {
+    .method-grid,
+    .why-grid {
         grid-template-columns: 1fr;
     }
 
-    .method-card {
+    .method-card,
+    .why-card {
         min-height: auto;
     }
 
@@ -727,6 +824,57 @@ a {
     .section-title p {
         font-size: 16px;
     }
+
+    .why-atlas {
+        padding: 95px 5%;
+    }
+
+    .why-atlas-header {
+        margin-bottom: 50px;
+    }
+
+    .why-atlas-header h2 {
+        font-size: 42px;
+    }
+
+    .why-atlas-header p {
+        font-size: 16px;
+    }
+
+    .why-number {
+        margin-bottom: 32px;
+    }
+
+    .final-cta {
+        padding: 105px 5%;
+    }
+
+    .final-cta h2 {
+        font-size: 42px;
+    }
+
+    .final-cta p {
+        font-size: 16px;
+    }
+
+    .final-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .final-cta-buttons .btn {
+        width: 100%;
+        max-width: 310px;
+    }
+
+    .final-cta-contact {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .final-cta-contact span {
+        display: none;
+    }
 }
 
 
@@ -738,7 +886,6 @@ a {
 
     .experience-card {
         height: 300px;
-
         border-radius: 20px;
     }
 
@@ -763,173 +910,18 @@ a {
     }
 
     .atlas-method-header h2,
-    .section-title h2 {
+    .section-title h2,
+    .why-atlas-header h2 {
         font-size: 38px;
     }
 
-    .method-card {
+    .method-card,
+    .why-card {
         padding: 34px 26px;
     }
 
-    .method-card h3 {
+    .method-card h3,
+    .why-card h3 {
         font-size: 30px;
-    }
-}
-/* =========================================
-   WHY TRAVELERS CHOOSE ATLAS SET
-========================================= */
-
-.why-atlas {
-    padding: 140px 5%;
-
-    background: #ffffff;
-    color: var(--text-dark);
-
-    scroll-margin-top: 95px;
-}
-
-.why-atlas-header {
-    max-width: 980px;
-    margin: 0 auto 80px;
-
-    text-align: center;
-}
-
-.why-atlas-header h2 {
-    margin: 0 auto 28px;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(46px, 5vw, 68px);
-    font-weight: 600;
-    line-height: 1.05;
-}
-
-.why-atlas-header p {
-    max-width: 720px;
-    margin: auto;
-
-    color: #687178;
-
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.why-grid {
-    max-width: 1400px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-
-.why-card {
-    position: relative;
-
-    min-height: 310px;
-    padding: 42px 32px;
-
-    border: 1px solid #e7e3dc;
-    border-radius: 20px;
-
-    background: #ffffff;
-
-    transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease,
-        border-color 0.35s ease;
-}
-
-.why-card::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 32px;
-
-    width: 0;
-    height: 3px;
-
-    border-radius: 10px;
-
-    background: var(--gold);
-
-    transition: width 0.35s ease;
-}
-
-.why-card:hover {
-    transform: translateY(-7px);
-
-    border-color: rgba(177, 138, 34, 0.35);
-
-    box-shadow: 0 24px 55px rgba(20, 31, 40, 0.1);
-}
-
-.why-card:hover::before {
-    width: 70px;
-}
-
-.why-number {
-    display: inline-block;
-    margin-bottom: 48px;
-
-    color: var(--gold-dark);
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 27px;
-    font-weight: 600;
-}
-
-.why-card h3 {
-    margin-bottom: 18px;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 1.1;
-}
-
-.why-card p {
-    color: #687178;
-
-    font-size: 16px;
-    line-height: 1.75;
-}
-
-@media (max-width: 1100px) {
-
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 700px) {
-
-    .why-atlas {
-        padding: 95px 5%;
-    }
-
-    .why-atlas-header {
-        margin-bottom: 50px;
-    }
-
-    .why-atlas-header h2 {
-        font-size: 42px;
-    }
-
-    .why-atlas-header p {
-        font-size: 16px;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .why-card {
-        min-height: auto;
-    }
-
-    .why-number {
-        margin-bottom: 32px;
     }
 }
