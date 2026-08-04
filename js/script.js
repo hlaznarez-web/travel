@@ -219,7 +219,7 @@ function applyTranslation(lang) {
 
     const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
-        canonicalLink.setAttribute("href", "https://hlaznarez-web.github.io/travel/");
+        canonicalLink.setAttribute("href", "https://atlassettravel.com/");
     }
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
