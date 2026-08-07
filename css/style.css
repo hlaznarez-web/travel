@@ -567,6 +567,11 @@ section,
 }
 
 .experience-content span {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(8, 19, 31, 0.48);
+    border: 1px solid rgba(8, 19, 31, 0.14);
     color: var(--gold);
     font-size: 13px;
     font-weight: 600;
@@ -799,6 +804,11 @@ section,
 }
 
 .trending-content span {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: rgba(8, 19, 31, 0.48);
+    border: 1px solid rgba(8, 19, 31, 0.14);
     color: var(--gold);
     font-size: 12px;
     font-weight: 700;
@@ -2040,6 +2050,14 @@ url("../images/destinations/cancun-hero.webp");
     background:
         linear-gradient(rgba(8, 19, 31, 0.34), rgba(8, 19, 31, 0.62)),
         url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80") center / cover no-repeat;
+}
+
+@media (min-width: 901px) {
+    .experience-media {
+        aspect-ratio: auto;
+        height: clamp(420px, 42vw, 480px);
+        margin: 8px 0 18px;
+    }
 }
 
 .experience-media-overlay {
