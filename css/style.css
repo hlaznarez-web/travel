@@ -884,6 +884,20 @@ section,
     color: #9da7b0;
 }
 
+.footer-legal-links {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-legal-links a,
+.footer-legal-links span {
+    color: #9da7b0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
 .trending-punta-cana {
     background-image:
         url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80");
@@ -1612,6 +1626,20 @@ section,
     max-width:320px;
 }
 
+.form-privacy-note {
+    margin-top: 14px;
+    color: #9da7b0;
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+.form-privacy-note a {
+    color: #cad2d8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 @media(max-width:900px){
 
     .form-grid{
@@ -2289,4 +2317,54 @@ url("../images/destinations/cancun-hero.webp");
 
 .whatsapp-float:hover{
     transform:translateY(-3px);
+}
+
+@media (max-width: 900px) {
+    .destination-intro {
+        padding: 92px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 44px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .destination-text p {
+        margin-bottom: 18px;
+    }
+
+    .resort-grid,
+    .gallery-grid,
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .destination-intro {
+        padding: 76px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 34px;
+    }
+
+    .highlight-card,
+    .testimonial-card,
+    .faq-item {
+        padding: 20px;
+    }
+
+    .resort-grid,
+    .gallery-grid,
+    .feature-grid,
+    .service-grid,
+    .timeline,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
 }
