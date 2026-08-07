@@ -1708,7 +1708,9 @@ url("../images/destinations/cancun-hero.webp");
 
     position:absolute;
     inset:0;
-    background: radial-gradient(circle at top, rgba(212,175,55,.12), transparent 42%);
+    background:
+        radial-gradient(circle at 50% 46%, rgba(8,19,31,.34) 0%, rgba(8,19,31,.16) 42%, rgba(8,19,31,0) 70%),
+        radial-gradient(circle at top, rgba(212,175,55,.12), transparent 42%);
 
 }
 
@@ -1844,6 +1846,14 @@ url("../images/destinations/cancun-hero.webp");
     color:#fff;
     margin-top:15px;
     line-height:1.2;
+}
+
+.explore-time-note {
+    max-width: 860px;
+    margin: 12px auto 0;
+    color: #c7d1dc;
+    font-size: 0.92rem;
+    line-height: 1.55;
 }
 
 .destination-grid{
@@ -2319,6 +2329,107 @@ url("../images/destinations/cancun-hero.webp");
     transform:translateY(-3px);
 }
 
+/* ===== CANCUN COMPACT PASS ===== */
+
+[data-page="cancun"] .destination-intro {
+    padding: 76px 0;
+}
+
+[data-page="cancun"] .section-heading {
+    margin-bottom: 38px;
+}
+
+[data-page="cancun"] .destination-grid {
+    gap: 34px;
+}
+
+[data-page="cancun"] .destination-text p {
+    margin-bottom: 16px;
+    line-height: 1.75;
+}
+
+[data-page="cancun"] .resort-grid,
+[data-page="cancun"] .feature-grid,
+[data-page="cancun"] .gallery-grid {
+    gap: 18px;
+}
+
+[data-page="cancun"] .highlight-card {
+    padding: 24px;
+}
+
+[data-page="cancun"] .resort-image {
+    min-height: 210px;
+}
+
+[data-page="cancun"] .resort-content {
+    padding: 20px 20px 22px;
+}
+
+[data-page="cancun"] #value-with-atlas .section-heading {
+    margin-bottom: 20px;
+}
+
+[data-page="cancun"] #value-with-atlas .value-intro {
+    max-width: 860px;
+    margin: 0 auto 18px;
+    text-align: center;
+}
+
+[data-page="cancun"] #value-with-atlas .feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+[data-page="cancun"] #value-with-atlas .feature-card {
+    min-height: auto;
+    padding: 20px;
+}
+
+[data-page="cancun"] #value-with-atlas .feature-card p {
+    margin-bottom: 0;
+}
+
+[data-page="cancun"] #value-with-atlas .value-cta {
+    margin-top: 18px;
+    text-align: center;
+}
+
+[data-page="cancun"] #why .destination-grid {
+    gap: 26px;
+}
+
+[data-page="cancun"] #why .highlight-card {
+    padding: 22px;
+}
+
+[data-page="cancun"] #explore-cancun .section-heading {
+    margin-bottom: 30px;
+}
+
+[data-page="cancun"] #explore-cancun .experience-media {
+    margin: 4px 0 16px;
+}
+
+[data-page="cancun"] #explore-cancun .feature-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+[data-page="cancun"] #explore-cancun .feature-card {
+    min-height: auto;
+    padding: 20px;
+}
+
+[data-page="cancun"] #timing,
+[data-page="cancun"] #faq {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+[data-page="cancun"] .final-cta {
+    padding: 102px 5%;
+}
+
 @media (max-width: 900px) {
     .destination-intro {
         padding: 92px 0;
@@ -2341,6 +2452,22 @@ url("../images/destinations/cancun-hero.webp");
     .gallery-grid,
     .feature-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    [data-page="cancun"] .destination-intro {
+        padding: 68px 0;
+    }
+
+    [data-page="cancun"] #explore-cancun .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    [data-page="cancun"] #value-with-atlas .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    [data-page="cancun"] .final-cta {
+        padding: 90px 5%;
     }
 }
 
@@ -2366,5 +2493,38 @@ url("../images/destinations/cancun-hero.webp");
     .timeline,
     .testimonial-grid {
         grid-template-columns: 1fr;
+    }
+
+    [data-page="cancun"] .destination-intro {
+        padding: 58px 0;
+    }
+
+    [data-page="cancun"] .section-heading {
+        margin-bottom: 26px;
+    }
+
+    [data-page="cancun"] .highlight-card,
+    [data-page="cancun"] .resort-content,
+    [data-page="cancun"] .faq-item {
+        padding: 18px;
+    }
+
+    [data-page="cancun"] .resort-image {
+        min-height: 190px;
+    }
+
+    [data-page="cancun"] #value-with-atlas .feature-grid,
+    [data-page="cancun"] #explore-cancun .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    [data-page="cancun"] #timing,
+    [data-page="cancun"] #faq {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    [data-page="cancun"] .final-cta {
+        padding: 78px 5%;
     }
 }
