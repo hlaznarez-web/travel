@@ -9,7 +9,7 @@
         "nav.contact": "Contact",
         "nav.start": "Plan Your Escape",
         "hero.subtitle": "TAILORED LUXURY TRAVEL PLANNING",
-        "hero.title": "Discover a journey shaped around<br>your style, rhythm, and priorities.",
+        "hero.title": "Discover a journey shaped around<br> your style, rhythm, and priorities.",
         "hero.text": "We plan each itinerary with care, combining refined recommendations, practical detail, and personal guidance from the first conversation.",
         "hero.design": "Plan Your Escape",
         "hero.explore": "Explore Our Approach",
@@ -1229,7 +1229,7 @@
         "nav.contact": "Contacto",
         "nav.start": "Planea Tu Escape",
         "hero.subtitle": "PLANIFICACIÓN DE VIAJES DE LUJO A MEDIDA",
-        "hero.title": "Descubre un viaje diseñado alrededor<br>de tu estilo, ritmo y prioridades.",
+        "hero.title": "Descubre un viaje diseñado alrededor<br> de tu estilo, ritmo y prioridades.",
         "hero.text": "Planificamos cada itinerario con cuidado, combinando recomendaciones refinadas, detalles prácticos y orientación personal desde la primera conversación.",
         "hero.design": "Planea Tu Escape",
         "hero.explore": "Explora Nuestro Enfoque",
@@ -2576,9 +2576,26 @@ function initReveal() {
     }
 }
 
+function initMobileWhatsAppVisibility() {
+    const whatsapp = document.querySelector(".whatsapp-float");
+    const hero = document.querySelector(".destination-hero");
+
+    if (!whatsapp || !hero || !("IntersectionObserver" in window)) {
+        return;
+    }
+
+    const mobileViewport = window.matchMedia("(max-width: 600px)");
+    const observer = new IntersectionObserver(([entry]) => {
+        whatsapp.classList.toggle("is-hidden-over-hero", mobileViewport.matches && entry.isIntersecting);
+    });
+
+    observer.observe(hero);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     applyTranslation(currentLang);
     initReveal();
+    initMobileWhatsAppVisibility();
 
     const toggle = document.getElementById("language-toggle");
     if (toggle) {
@@ -2613,8 +2630,42 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.addEventListener("click", openMobileMenu);
     }
 
-    document.querySelectorAll(".site-nav a, .right-menu a, .right-menu button").forEach((link) => {
-        link.addEventListener("click", closeMobileMenu);
+    document.querySelectorAll(".site-nav a, .right-menu a, .right-menu button").forEach((control) => {
+        control.addEventListener("click", (event) => {
+            const href = control.getAttribute("href");
+            const target = href?.startsWith("#") ? document.querySelector(href) : null;
+
+            closeMobileMenu();
+
+            if (!target || window.innerWidth > 768) {
+                return;
+            }
+
+            event.preventDefault();
+            const fontsReady = document.fonts?.ready || Promise.resolve();
+
+            fontsReady.then(() => window.requestAnimationFrame(() => {
+                const root = document.documentElement;
+                const previousScrollBehavior = root.style.scrollBehavior;
+                const positionTarget = () => {
+                    const scrollPadding = Number.parseFloat(getComputedStyle(root).scrollPaddingTop) || 0;
+                    const targetTop = target.getBoundingClientRect().top + window.scrollY - scrollPadding;
+
+                    window.scrollTo(0, targetTop);
+                };
+
+                root.style.scrollBehavior = "auto";
+                positionTarget();
+                window.history.pushState(null, "", href);
+                window.requestAnimationFrame(() => {
+                    positionTarget();
+                    window.setTimeout(() => {
+                        positionTarget();
+                        root.style.scrollBehavior = previousScrollBehavior;
+                    }, 150);
+                });
+            }));
+        });
     });
 
     window.addEventListener("resize", () => {

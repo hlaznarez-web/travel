@@ -1074,6 +1074,14 @@ section,
 
 @media (max-width: 768px) {
 
+    html {
+        scroll-padding-top: 88px;
+    }
+
+    .header .container {
+        flex-wrap: wrap;
+    }
+
     .container {
         width: 92%;
         padding: 18px 0;
@@ -1318,6 +1326,30 @@ section,
 
 @media (max-width: 600px) {
 
+    .destination-hero {
+        min-height: 100svh;
+        padding: 110px 20px 64px;
+    }
+
+    [data-page="puntaCana"] .destination-hero .hero-content h1,
+    [data-page="orlando"] .destination-hero .hero-content h1,
+    [data-page="europe"] .destination-hero .hero-content h1,
+    [data-page="hawaii"] .destination-hero .hero-content h1 {
+        margin-bottom: 16px;
+        font-size: clamp(40px, 11vw, 46px);
+        line-height: 1;
+    }
+
+    [data-page="puntaCana"] .destination-hero .hero-content p,
+    [data-page="orlando"] .destination-hero .hero-content p,
+    [data-page="europe"] .destination-hero .hero-content p,
+    [data-page="hawaii"] .destination-hero .hero-content p {
+        max-width: 35ch;
+        margin-bottom: 22px;
+        font-size: 0.94rem;
+        line-height: 1.55;
+    }
+
     .experience-card {
         height: 300px;
         border-radius: 20px;
@@ -1369,8 +1401,10 @@ section,
         letter-spacing: 0.12em;
     }
 
-    .destination-hero {
-        padding: 160px 20px 100px;
+    .resort-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 
     .nav-links {
@@ -1419,8 +1453,12 @@ section,
     }
 
     .hero h1 {
-        font-size: 38px;
-        line-height: 1.08;
+        font-size: 34px;
+        line-height: 1.04;
+    }
+
+    .hero h1 br {
+        display: none;
     }
 
     .hero p {
@@ -1480,7 +1518,7 @@ section,
 @media (max-width: 390px) {
 
     .hero h1 {
-        font-size: 35px;
+        font-size: 32px;
     }
 
     .hero p {
@@ -1517,7 +1555,7 @@ section,
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .btn {
@@ -2361,6 +2399,18 @@ url("../images/destinations/cancun-hero.webp");
 
 .whatsapp-float:hover{
     transform:translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .resort-badge {
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+    .whatsapp-float.is-hidden-over-hero {
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 /* ===== CANCUN COMPACT PASS ===== */

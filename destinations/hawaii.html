@@ -63,13 +63,13 @@ crossorigin>
 rel="stylesheet">
 
 <link rel="stylesheet"
-href="../css/style.css">
+href="../css/style.css?v=7">
 
 </head>
 
 <body>
 
-<header class="site-header">
+<header class="site-header header">
 
 <div class="container header-container">
 
@@ -81,7 +81,13 @@ ATLAS SET <span>Travel</span>
 
 </a>
 
-<nav aria-label="Primary navigation">
+<button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<nav class="site-nav" id="mobile-nav" aria-label="Primary navigation">
 
 <ul class="nav-links">
 
@@ -97,9 +103,13 @@ ATLAS SET <span>Travel</span>
 
 </nav>
 
+<div class="right-menu">
+
 <button class="language" type="button" id="language-toggle" aria-label="Switch language">
 EN
 </button>
+
+</div>
 
 </div>
 
@@ -898,7 +908,7 @@ Private transfers - Curated stays - Signature experiences
 
 <a href="https://wa.me/17865035312" class="whatsapp-float" aria-label="Contact Atlas Set Travel on WhatsApp" data-lang="whatsapp.aria" data-lang-type="aria-label"></a>
 
-<script src="../js/script.js"></script>
+<script src="../js/script.js?v=8"></script>
 
 </body>
 
